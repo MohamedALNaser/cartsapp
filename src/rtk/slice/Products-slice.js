@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts", //prefix type
   async () => {
-    const res = await fetch("http://localhost:9000/products");
+    const res = await fetch("/.netlify/functions/db/products");
     const data = await res.json();
     console.log(data);
     return data; // after the builder if fullfiled , the data will be pass as action payload
