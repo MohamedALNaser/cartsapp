@@ -9,7 +9,7 @@ function Products() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
   // console.log(products);
   return (
     <Container className="py-5">
